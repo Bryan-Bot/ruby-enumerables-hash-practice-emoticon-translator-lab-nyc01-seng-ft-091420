@@ -5,8 +5,7 @@ require 'pry'
 
 def load_library(file)
   # code goes here
-    binding.pry
-  far = YMAL.load_file('emoticons.yml')
+  far = YMAL.load_file(file)
   binding.pry
   far.each_with_object({}) do |(key, value), new_hash|
     new_hash[key] = {:english => value[0], :japanese => value[1]}
