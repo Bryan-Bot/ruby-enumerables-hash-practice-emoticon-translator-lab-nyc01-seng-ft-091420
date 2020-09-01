@@ -15,12 +15,11 @@ end
 
 def get_japanese_emoticon(load_library, emoticon)
   # code goes here
-  far = YAML.load_file(path)
   far.each do |key, value|
     if emoticon == value[1]
       value[0]
     else
-      "sorry,your emoticon isnt here"
+      "sorry, your emoticon isnt here"
     end
   end
 end
