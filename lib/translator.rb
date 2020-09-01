@@ -15,12 +15,12 @@ end
 
 def get_japanese_emoticon(load_library, emoticon)
   # code goes here
-  far = load_library(path)
-  far.each do |key, value|
+  file = load_library(path)
+  file.each do |key, value|
     if value.has_value?(emoticon)
-      value[:japanese]
+      return value[:japanese]
     else
-      "sorry, your emoticon isnt here"
+      return "sorry, your emoticon isnt here"
     end
   end
 end
