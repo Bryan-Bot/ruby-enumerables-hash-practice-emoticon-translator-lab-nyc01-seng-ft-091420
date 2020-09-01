@@ -19,8 +19,9 @@ def get_japanese_emoticon(path, emoticon)
   far.each do |key, value|
     if emoticon == value[1]
       value[0]
-    else
-     "Sorry"
+    end
+    if emoticon !== value[1]
+      "sorry"
     end
   end
 end
