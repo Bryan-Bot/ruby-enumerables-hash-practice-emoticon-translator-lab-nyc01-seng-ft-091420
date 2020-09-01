@@ -19,9 +19,8 @@ def get_japanese_emoticon(load_library, emoticon)
   far.each do |key, value|
     if emoticon == value[1]
       value[0]
-    end
-    if emoticon !== value[1]
-      "sorry"
+    else
+      "sorry,your emoticon isnt here"
     end
   end
 end
