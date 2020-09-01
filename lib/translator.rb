@@ -13,7 +13,7 @@ def load_library(path)
   new_hash
 end
 
-def get_japanese_emoticon(path, emoticon)
+def get_japanese_emoticon(load_library, emoticon)
   # code goes here
   far = YAML.load_file(path)
   far.each do |key, value|
