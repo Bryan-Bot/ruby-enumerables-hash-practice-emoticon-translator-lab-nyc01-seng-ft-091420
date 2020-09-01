@@ -20,7 +20,7 @@ def get_japanese_emoticon(path, emoticon)
     if emoticon == value[1]
       value[0]
     else
-      puts "Sorry"
+     "Sorry"
     end
   end
 end
