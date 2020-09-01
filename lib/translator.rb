@@ -6,7 +6,7 @@ require 'pry'
 def load_library(file)
   # code goes here
   far = YMAL.load_file(file)
-
+  binding.pry
 
 end
 
