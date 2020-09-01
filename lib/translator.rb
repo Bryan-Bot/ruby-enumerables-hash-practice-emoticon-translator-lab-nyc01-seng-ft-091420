@@ -17,8 +17,8 @@ def get_japanese_emoticon(load_library, emoticon)
   # code goes here
   far = load_library(path)
   far.each do |key, value|
-    if value == emoticon
-      value[0]
+    if value.has_value?(emoticon)
+      value[:japanese]
     else
       "sorry, your emoticon isnt here"
     end
