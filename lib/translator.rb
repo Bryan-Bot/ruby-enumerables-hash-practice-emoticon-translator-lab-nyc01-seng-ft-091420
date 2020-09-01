@@ -13,25 +13,25 @@ def load_library(path)
   new_hash
 end
 
-def get_japanese_emoticon(path, emoticon)
+def get_japanese_emoticon(path, search)
   # code goes here
   file = load_library(path)
   response = "Sorry, that emoticon was not found"
   file.each do |key, value|
-    if emoticon == file[key][:english]
+    if search == file[key][:english]
       response = file[key][:japanese]
     end
   end
   response
 end
 
-def get_english_meaning(path, emoticon)
+def get_english_meaning(path, search)
   # code goes here
   file = load_library(path)
   response = "Sorry, that emoticon was not found"
   file.each do |key, value|
-    if emoticon == file[key][:japanese]
-      response = file[key][:english]
+    if search == file[key][:japanese]
+      response = file[key]
     end
   end
   response
