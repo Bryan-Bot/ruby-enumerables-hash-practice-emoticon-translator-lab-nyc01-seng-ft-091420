@@ -31,7 +31,7 @@ def get_english_meaning(path, search)
   response = "Sorry, that emoticon was not found"
   file.each do |key, value|
     if search == file[key][:japanese]
-      response = file[key][:english]
+      response = file[key]
     end
   end
   response
