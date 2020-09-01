@@ -13,14 +13,15 @@ def load_library(path)
   new_hash
 end
 
-def get_japanese_emoticon(load_library, emoticon)
+def get_japanese_emoticon(path, emoticon)
   # code goes here
   file = load_library(path)
+  response = "sorry we dont know"
   file.each do |key, value|
-    if value.has_value?(emoticon)
-      return value[:japanese]
+    if emoticon == file[key][:english]
+      res = file[value][:japanese]
     else
-      return "sorry, your emoticon isnt here"
+      response
     end
   end
 end
