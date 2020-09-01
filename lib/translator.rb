@@ -19,7 +19,7 @@ def get_japanese_emoticon(path, emoticon)
   response = "sorry we dont know"
   file.each do |key, value|
     if emoticon == file[key][:english]
-      response = file[value][:japanese]
+      response = file[key][:japanese]
     end
   end
   response
