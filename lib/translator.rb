@@ -4,7 +4,7 @@ require 'pry'
 def load_library(file)
   # code goes here
     file.each_with_object({}) do |(key, value), hash|
-      hash[key] = {english: value[0], japanese: value[1]}
+      hash[key] = {english: => value[0], japanese: => value[1]}
     end
 end
 
